@@ -1,1 +1,1 @@
-Compilation of weekly reports on HTTP Cookies
+Compilation of weekly reports on AlpineJS
