@@ -28,8 +28,8 @@ Jan 27, 2022
 `x-data` defines an html section as an alpine component
 ```html
 
-<div x-data="{ open: false }"> <!-- initial data "open"-->
-    <button @click="open = ! open">Toggle Content</button> <!-- toggle initial data "open" from true to false and vice-versa -->
+<div x-data="{ open: false }"> <!-- initial state "open"-->
+    <button @click="open = ! open">Toggle Content</button> <!-- toggle initial state "open" from true to false and vice-versa -->
  
     <div x-show="open"> <!-- show this div based on the value of "open" if open = true then show; if open = false then hide -->
         This would show or hide depending on the value of open
@@ -37,4 +37,15 @@ Jan 27, 2022
 </div>
 ```
 
+Jan 28, 2022
+methods can be stored inside `x-data`
+```html
+<div x-data="{ open: false, toggle() { this.open = ! this.open } }"> <!-- toggle method changes "open" state from false to true and vice-versa -->
+    <button @click="toggle()">Toggle Content</button> <!-- call toggle method inside x-data initial data -->
+ 
+    <div x-show="open">
+        This would show or hide depending on the value of open
+    </div>
+</div>
+```
 
