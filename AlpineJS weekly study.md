@@ -84,4 +84,24 @@ prevent default
 <div x-data="{ open: false }" x-effect="console.log(open)">
 ```
 
+## Feb 10, 2022
+`x-model` allows input binding to an Alpine data
+```html
+<div x-data="{ message: '' }">
+<!-- x-model changes the value of x-data -->
+    <input type="text" x-model="message">
+<!-- x-text gets value from x-data -->
+    <span x-text="message">
+</div>
+```
+
+## Feb 11, 2022
+`.lazy` modifer
+
+```html
+<!-- shows error only when user tabs away instead of every keystroke -->
+<input type="text" x-model.lazy="username">
+<span x-show="username.length > 20">The username is too long.</span>
+
+```
 
