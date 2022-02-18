@@ -102,6 +102,26 @@ prevent default
 <!-- shows error only when user tabs away instead of every keystroke -->
 <input type="text" x-model.lazy="username">
 <span x-show="username.length > 20">The username is too long.</span>
+```
 
+## Feb 17, 2022
+`.debounce` modifier
+
+```html
+<!-- delay update of input element (250ms default) after last keystroke-->
+<input type="text" x-model.debounce="search">
+
+<!-- delay update of input element by 500ms after last keystroke-->
+<input type="text" x-model.debounce.500ms="search">
+```
+
+## Feb 18, 2022
+`x-ref` and `$refs` 
+
+```html
+<!-- on click, get all refs with value "text" and remove them -->
+<button @click="$refs.text.remove()">Remove Text</button>
+ 
+<span x-ref="text">Hello 👋</span>
 ```
 
